@@ -1,6 +1,10 @@
 Abeira::Application.routes.draw do
-  
+
   root :to => 'home#index'
+
+  match '/admin',   to: 'pages#admin'
+  match '/fotos',   to: 'pages#fotos'
+  match '/contato',   to: 'pages#contato'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

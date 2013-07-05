@@ -707,7 +707,7 @@ a.prev span, a.next span {
 .contact_info .about-info li:hover a, .contact_info .about-info li:hover span{color:#000}
 .contact_info .about-info li span, .contact_info .about-info li a{font-weight:bold; color:#444}
 .main-content-top{background:url(../images/page-title.png) no-repeat center; min-height:84px; padding-top:10px}
-.main-content-top h2{padding-left:1.250em; text-transform:uppercase; color:#595959; font-weight:bold; font-size:22px; line-height:44px}
+.main-content-top h2{padding-left:1.250em; text-transform:uppercase; color:rgb(61,61,61); font-weight:bold; font-size:22px; line-height:44px; text-shadow: 0px 4px 15px rgb(255, 255, 255);}
 @media only screen and (max-width: 48em) {
 	.featured-block{margin-bottom:20px}
 }
