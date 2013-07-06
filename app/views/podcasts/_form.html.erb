@@ -1,0 +1,35 @@
+<br><br>
+<%= form_for(@podcast) do |f| %>
+  <% if @podcast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
+
+      <ul>
+      <% @podcast.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :título %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :imagem %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto, :class => 'ckeditor' %>
+  </div><br>
+  <div class="field">
+    <%= f.label :soundcloud %><br />
+    <%= f.text_field :soundcloud %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit"Salvar", :class => 'button large' %>
+  </div>
+<% end %>
+<br><br>

@@ -1,0 +1,49 @@
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Podcast</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+
+<!-- admin only -->
+<div class="content_wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+      <h4><%= link_to 'Adicionar Podcast', new_podcast_path %></h4>
+    </div>     
+  </div>
+</div> 
+<!-- admin only -->
+
+<% @podcasts.each do |podcast| %>
+
+<div class="content_wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+      <article class="post col-1">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%<%= podcast.soundcloud %>"></iframe>
+        <h2><%= podcast.titulo %></h2>
+        <p>Postado em <em><%= podcast.created_at.strftime("%d/%m/%Y") %></em></p>
+        <p class="post_text"><%= raw(HTML_Truncator.truncate(podcast.texto, 75)) %></p>
+        <%= link_to 'Leia mais', podcast, :class => "button" %>
+
+        <!-- admin only -->
+        &nbsp <%= link_to 'Editar', edit_podcast_path(podcast) %> | <%= link_to 'Deletar', podcast, method: :delete, data: { confirm: 'Tem certeza?' } %>
+        <!-- admin only -->
+
+      </article>
+    </div>     
+  </div>
+</div>           
+
+<% end %>
+
+<div class="pagination-wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+      <h3><%= will_paginate @artigos, previous_label: h("<<"), next_label: h(">>") %></h3>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

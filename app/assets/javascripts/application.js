@@ -11,3 +11,5 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require_tree .
+//= require ckeditor-jquery
+//= require jquery_ujs

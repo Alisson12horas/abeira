@@ -1,0 +1,21 @@
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Podcast</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+
+<div class="row">
+  <div class="large-12 columns">
+    <p id="notice"><%= notice %></p>
+    <h1><%= @podcast.titulo %></h1>
+    <p>Postado em <em><%= @podcast.created_at.strftime("%d/%m/%Y") %></em></p>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%<%= @podcast.soundcloud %>"></iframe><br><br>
+    <% if @podcast.image.present? %>
+      <%= @podcast.image %>
+    <% end %>
+    <%= raw(@podcast.texto) %><br><br>
+    <%= link_to 'Voltar', podcasts_path %><br><br>
+  </div>
+</div>

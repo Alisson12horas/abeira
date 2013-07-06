@@ -1,5 +1,7 @@
 Abeira::Application.routes.draw do
 
+  resources :podcasts
+
   root :to => 'home#index'
 
   match '/admin',   to: 'pages#admin'
