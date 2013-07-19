@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130706040802) do
+ActiveRecord::Schema.define(:version => 20130718232256) do
+
+  create_table "agendas", :force => true do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "image"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "podcasts", :force => true do |t|
     t.string   "titulo"

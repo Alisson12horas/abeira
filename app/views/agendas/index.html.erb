@@ -1,0 +1,43 @@
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Agenda</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+
+<!-- admin only -->
+<div class="content_wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+      <h4><%= link_to 'Adicionar Ítem Na Agenda', new_agenda_path %></h4>
+    </div>     
+  </div>
+</div> 
+<!-- admin only -->
+
+<br>
+<div class="row">
+  <div class="large-12 columns"><br>
+    <div id="articles">
+      <h1 id="month">
+        <%= link_to "<", date: @date.prev_month %>
+        <%= @date.strftime("%m / %Y") %>
+        <%= link_to ">", date: @date.next_month %>
+      </h1>
+      <%= calendar @date do |date| %>
+      <%= date.day %>
+      <% if @agendas_by_date[date] %>
+      <ul>
+        <% @agendas_by_date[date].each do |agenda| %>
+        <li><h4 class="button success"><%= link_to agenda.titulo, agenda %></h4></li>
+        <% end %>
+      </ul>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>

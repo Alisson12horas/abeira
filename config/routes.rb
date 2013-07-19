@@ -1,5 +1,6 @@
 Abeira::Application.routes.draw do
 
+  resources :agendas
   resources :podcasts
 
   root :to => 'home#index'
@@ -7,6 +8,8 @@ Abeira::Application.routes.draw do
   match '/admin',   to: 'pages#admin'
   match '/fotos',   to: 'pages#fotos'
   match '/contato',   to: 'pages#contato'
+  match '/oquee',   to: 'pages#oquee'
+  match '/agenda',   to: 'agendas#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def oquee
+  end
+
   def admin
   end
 
