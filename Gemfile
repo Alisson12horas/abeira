@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13.rc1'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'carrierwave'
+gem 'fog'
 
 group :production do
   gem 'pg'
@@ -13,6 +12,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem "flickr-objects"
 
 # Gems used only for assets and not required
 # in production environments by default.

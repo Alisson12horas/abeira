@@ -4,7 +4,7 @@
    <div class="slider-wrapper theme-default">
     <div id="slider" class="nivoSlider">
       <a href="http://www.soundcloud.com/abeira" target="_blank"><img src="images/slide1.jpg" alt="slide1" /></a>
-      <a href="#"><img src="images/slide2.jpg" alt="slide2"  /></a>
+      <a href="http://www.flickr.com/photos/abeira" target="_blank"><img src="images/slide2.jpg" alt="slide2"/></a>
       <img src="images/slide3.jpg" alt="slide3" />
     </div>
     <div id="caption1" class="nivo-html-caption">
@@ -93,83 +93,20 @@
     <div class="large-12 columns">      
       <div class="work_slide">
         <ul id="work_slide">
+          <% @podcasts.each do |podcast| %>  
           <li>
             <div class="view view-two"> 
-              <img src="images/demo/post/post-5.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="images/demo/singlepost/spost.png" data-rel="prettyPhoto"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="portfolio-single.html"><i class="icon-external-link icon-large"></i></a> 
+              <%= image_tag podcast.image_url %>  
+              <div class="mask">
+                              
+                <h3><%= podcast.titulo %></h3>
+                <p><%= raw(HTML_Truncator.truncate(podcast.texto, 10)) %></p>
+                <%= link_to '+', podcast, :class => "button btn-icon icon-2" %>
+               
               </div>
             </div>
           </li>
-          <li>
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-6.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
-          <li >
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-7.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-8.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-9.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-10.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="view view-two"> 
-              <img src="images/demo/post/post-11.png" alt="" /> 
-              <div class="mask"> 
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Aenean eget mauris nibh, eu pellentesque ipsum. The lorem is totally site amet.</p>
-                <a class="button btn-icon" href="#"><i class="icon-zoom-in icon-large"></i></a>
-                <a class="button btn-icon icon-2" href="#"><i class="icon-external-link icon-large"></i></a> 
-              </div>
-            </div>
-          </li>
+          <% end %>
         </ul>
 
         <div class="clearfix"></div>
@@ -187,13 +124,9 @@
             <h3>O que é Podcast?</h3>  
             <div class="clearfix"></div>           
           </div>
-          <h6>De uma forma imprecisa, podcast é um programa de rádio distribuído pela internet. Isso é impreciso porque existem os videocast, podcasts de vídeo. E não dá para ver vídeo num rádio, não é mesmo?<br><br>
-
-Mais precisamente, Podcast é a junção de iPod e broadcast. Onde iPod é o famoso tocador da Apple, e broadcast significa difusão. Podcast é um conteúdo, seja somente áudio ou audiovisual, distribuído de forma independente. Totalmente internet.<br><br>
-
-Uma curiosidade. iPod é uma referência ao EVA Pod do filme 2001 – Uma Odisséia no Espaço. Era uma nave auxiliar, transportando um único homem. Pod significa casulo, bainha. Nesse sentido, iPod é usado para você guardar algo e “carregar” sempre ao seu lado.
-</h6><br> 
-<a href="/oquee" class="button">Leia mais</a>
+          <h6>Podcast é conteúdo em áudio feito por uma equipe que escolhe assuntos variados e específicos, ou seja, se você gosta de música, literatura, novidades entre outros assuntos você pode escolher um podcast a hora que quiser para escutar.
+          </h6><br> 
+          <a href="/oquee" class="button">Leia mais</a>
           <div class="module_content popular-posts">
 
           </div>
@@ -237,24 +170,24 @@ Uma curiosidade. iPod é uma referência ao EVA Pod do filme 2001 – Uma Odiss�
               <li>
                 <div class="testimonial-content">
                   <p>O que eu gosto de ouvir, quando eu quero ouvir. Pra leigos eu digo que é tipo um programa de radio na internet, apesar de não ser a melhor explicação.</p>
-                  </div>
-                  <cite>Ana Gouvea</cite>
-                  <p class="test_author">Podcaster</p>
-                </li>
-             <li>
+                </div>
+                <cite>Ana Gouvea</cite>
+                <p class="test_author">Podcaster</p>
+              </li>
+              <li>
                 <div class="testimonial-content">
                   <p>Podcast é conteúdo em formato de áudio disponível para download na internet. É o Mun-Há dos Thundercats. É o Governador do Walking Dead. Ou simplesmente um programa de rádio na internet. Boa sorte tentando explicar para sua família.</p>
                 </div>
                 <cite>Vitor Padilha</cite>
                 <p class="test_author">Isso Dava Um Podcast</p>
               </li>
-              </ul>
-              <div class="clearfix"></div>
-              <a class="prev" id="slide_prev1" href="#"><img src="images/arrow_left.png" alt="Previous" /></a>
-              <a class="next" id="slide_next1" href="#"><img src="images/arrow_right.png" alt="Next" /></a>
-            </div>
+            </ul>
+            <div class="clearfix"></div>
+            <a class="prev" id="slide_prev1" href="#"><img src="images/arrow_left.png" alt="Previous" /></a>
+            <a class="next" id="slide_next1" href="#"><img src="images/arrow_right.png" alt="Next" /></a>
           </div>
         </div>
-
       </div>
+
     </div>
+  </div>
