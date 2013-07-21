@@ -3,6 +3,7 @@ class CreatePodcasts < ActiveRecord::Migration
     create_table :podcasts do |t|
       t.string :titulo
       t.text :texto
+      t.string :image
       t.string :soundcloud
 
       t.timestamps
