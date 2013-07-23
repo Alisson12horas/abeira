@@ -47,6 +47,7 @@ GEM
     excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    flickraw (0.9.6)
     fog (1.14.0)
       builder
       excon (~> 0.25.0)
@@ -138,6 +139,7 @@ DEPENDENCIES
   carrierwave
   ckeditor_rails
   coffee-rails (~> 3.2.1)
+  flickraw
   fog
   html_truncator
   jquery-rails

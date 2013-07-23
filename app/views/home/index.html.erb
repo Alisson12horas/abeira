@@ -55,7 +55,7 @@
       </div>
       <div class="large-3 columns">
         <div class="featured-block">
-          <a href="#">
+          <a href="/fotos">
             <span class="icon-camera fblock-icon"></span>
             <div class="fblock-content">
               <p class="fblock-main">Fotos
@@ -98,11 +98,11 @@
             <div class="view view-two"> 
               <%= image_tag podcast.image_url %>  
               <div class="mask">
-                              
+
                 <h3><%= podcast.titulo %></h3>
                 <p><%= raw(HTML_Truncator.truncate(podcast.texto, 10)) %></p>
                 <%= link_to '+', podcast, :class => "button btn-icon icon-2" %>
-               
+
               </div>
             </div>
           </li>
@@ -138,56 +138,60 @@
             <h3>Fotos</h3> 
             <div class="clearfix"></div>            
           </div>
-          <div class="module_content">
-            <ul class="large-block-grid-2">
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-              <li><img src="images/demo/client/client_img.png" alt="client_img"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="large-4 columns">
-          <div class="title-block">         
-            <div class="icon-container"><i class="icon icon-comment"></i></div>
-            <span class="arrow-right"></span>
-            <h3>Frases</h3>
-            <div class="clearfix"></div>      
-          </div>
-          <div class="module_content testimonial-block">
-            <ul id="testimonial_slide">
-              <li>
-                <div class="testimonial-content">
-                  <p>Na época dos dinossauros foi achada uma caverna em formato perfeitamente oval que armazenou o som do rugido das enormes criaturas jurássicas por anos. Esse foi o primeiro podcast do mundo. Podcast traduzido em uma língua bem franca seria a casta dos produtores de conteúdo em áudio. Ou seja, um bando de nerd sem amigos usando o microfone comprado para DOTA fazendo anedotas.</p>
-                </div>
-                <cite>Saul Junior</cite>
-                <p class="test_author">Toma Rumo Guri</p>
-              </li>
-              <li>
-                <div class="testimonial-content">
-                  <p>O que eu gosto de ouvir, quando eu quero ouvir. Pra leigos eu digo que é tipo um programa de radio na internet, apesar de não ser a melhor explicação.</p>
-                </div>
-                <cite>Ana Gouvea</cite>
-                <p class="test_author">Podcaster</p>
-              </li>
-              <li>
-                <div class="testimonial-content">
-                  <p>Podcast é conteúdo em formato de áudio disponível para download na internet. É o Mun-Há dos Thundercats. É o Governador do Walking Dead. Ou simplesmente um programa de rádio na internet. Boa sorte tentando explicar para sua família.</p>
-                </div>
-                <cite>Vitor Padilha</cite>
-                <p class="test_author">Isso Dava Um Podcast</p>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-            <a class="prev" id="slide_prev1" href="#"><img src="images/arrow_left.png" alt="Previous" /></a>
-            <a class="next" id="slide_next1" href="#"><img src="images/arrow_right.png" alt="Next" /></a>
-          </div>
-        </div>
-      </div>
 
-    </div>
+
+<!-- Start of Flickr Badge -->
+<style type="text/css"> 
+.flickr_badge_image {margin:0px;display:inline;}
+.flickr_badge_image img {border: 1px solid #666666 !important; padding:2px; margin:9px;}
+#flickr_badge_wrapper {width:357px;text-align:left}
+</style>
+<div id="flickr_badge_wrapper">
+  <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&display=latest&size=t&layout=x&source=user&user=98492029@N06">
+</script>
+</div>
+<!-- End of Flickr Badge -->
+
+
+
+</div>
+<div class="large-4 columns">
+  <div class="title-block">         
+    <div class="icon-container"><i class="icon icon-comment"></i></div>
+    <span class="arrow-right"></span>
+    <h3>Frases</h3>
+    <div class="clearfix"></div>      
   </div>
+  <div class="module_content testimonial-block">
+    <ul id="testimonial_slide">
+      <li>
+        <div class="testimonial-content">
+          <p>Na época dos dinossauros foi achada uma caverna em formato perfeitamente oval que armazenou o som do rugido das enormes criaturas jurássicas por anos. Esse foi o primeiro podcast do mundo. Podcast traduzido em uma língua bem franca seria a casta dos produtores de conteúdo em áudio. Ou seja, um bando de nerd sem amigos usando o microfone comprado para DOTA fazendo anedotas.</p>
+        </div>
+        <cite>Saul Junior</cite>
+        <p class="test_author">Toma Rumo Guri</p>
+      </li>
+      <li>
+        <div class="testimonial-content">
+          <p>O que eu gosto de ouvir, quando eu quero ouvir. Pra leigos eu digo que é tipo um programa de radio na internet, apesar de não ser a melhor explicação.</p>
+        </div>
+        <cite>Ana Gouvea</cite>
+        <p class="test_author">Podcaster</p>
+      </li>
+      <li>
+        <div class="testimonial-content">
+          <p>Podcast é conteúdo em formato de áudio disponível para download na internet. É o Mun-Há dos Thundercats. É o Governador do Walking Dead. Ou simplesmente um programa de rádio na internet. Boa sorte tentando explicar para sua família.</p>
+        </div>
+        <cite>Vitor Padilha</cite>
+        <p class="test_author">Isso Dava Um Podcast</p>
+      </li>
+    </ul>
+    <div class="clearfix"></div>
+    <a class="prev" id="slide_prev1" href="#"><img src="images/arrow_left.png" alt="Previous" /></a>
+    <a class="next" id="slide_next1" href="#"><img src="images/arrow_right.png" alt="Next" /></a>
+  </div>
+</div>
+</div>
+
+</div>
+</div>

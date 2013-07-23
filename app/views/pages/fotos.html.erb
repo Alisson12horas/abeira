@@ -1,2 +1,28 @@
-<h1>Pages#fotos</h1>
-<p>Find me in app/views/pages/fotos.html.erb</p>
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Fotos</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+
+<div class="row">
+  <div class="large-12 columns"><br>
+    <br><br>
+
+    <!-- Start of Flickr Badge -->
+    <style type="text/css"> 
+    .flickr_badge_image {margin:0px;display:inline;}
+    .flickr_badge_image img {border: 1px solid #666666 !important; padding:1px; margin:2px;}
+    #flickr_badge_wrapper {width:1168px;text-align:center}
+    </style>
+    <div id="flickr_badge_wrapper">
+      <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&display=latest&size=m&layout=x&source=user&user=98492029@N06">
+      </script>
+      <h1><%= link_to "Acesse o flickr para vizualizar a galeria completa.", "http://www.flickr.com/photos/abeira/", target:'_blank' %></h1>
+    </div>
+    <!-- End of Flickr Badge -->
+
+    <br><br>
+  </div>
+</div>
