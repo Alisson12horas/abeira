@@ -23,3 +23,4 @@ gem 'jquery-rails'
 gem 'will_paginate'
 gem 'ckeditor_rails'
 gem "html_truncator"
+gem 'pony'

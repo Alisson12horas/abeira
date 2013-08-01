@@ -9,21 +9,21 @@
 <div class="content_wrapper">
   <div class="row">
     <div class="large-12 columns main-content-top">
-      <form method="POST" action="#" class="contactForm">
+      <form method="POST" action="enviar_email.html" class="contactForm">
         <div id="status"></div>
         <div class="contact_form">
           <div class="row">
             <div class="small-4 columns">
-              <input type="text" placeholder="Nome" id="contactname" />
+              <input type="text" name="nome" placeholder="Nome" id="contactname" />
             </div>
             <div class="small-4 columns">
-              <input type="text" placeholder="E-mail" id="contactemail" />
+              <input type="text" name="email" placeholder="E-mail" id="contactemail" />
             </div>
             <div class="small-4 columns">
-              <input type="text" placeholder="Website" id="contactwebsite" />
+              <input type="text" name="website" placeholder="Website" id="contactwebsite" />
             </div>
             <div class="small-12 columns">
-              <textarea cols="10" rows="15" id="contactmessage" name="message"></textarea>
+              <textarea cols="10" rows="15" id="contactmessage" name="mensagem" name="message"></textarea>
             </div>
             <div class="small-4 columns">
               <input type="submit" class="button right" value="Enviar mensagem" name="send" id="send" />

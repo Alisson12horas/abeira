@@ -83,6 +83,8 @@ GEM
       mini_portile (~> 0.5.0)
     pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
+    pony (1.4.1)
+      mail (> 2.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -143,6 +145,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   pg
+  pony
   rails (= 3.2.13.rc1)
   sass-rails (~> 3.2.3)
   sqlite3

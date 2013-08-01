@@ -11,5 +11,6 @@ Abeira::Application.routes.draw do
   match '/oquee',   to: 'pages#oquee'
   match '/agenda',   to: 'agendas#index'
   match '/equipe',   to: 'pages#equipe'
+  match '/enviar_email',    to: 'pages#enviar_email'
 
 end
