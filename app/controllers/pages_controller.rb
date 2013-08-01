@@ -19,6 +19,6 @@ class PagesController < ApplicationController
     email = params[:email]
     website = params[:website]
     mensagem = params[:mensagem]
-    Pony.mail(:subject => "Contato do Site" ,:from => 'contatoabeira@gmail.com', :to => 'ini.ebone@gmail.com', :html_body => "<h1>Contato do Site</h1><p>#{mensagem}</p><br>Enviado por #{nome}<br>#{email}<br>#{website}.", :body => "<h1>Contato do Site</h1><p>#{mensagem}</p><br>Enviado por #{nome}<br>#{email}<br>#{website}.") 
+    Pony.mail(:subject => "Contato do Site" ,:from => 'contatoabeira@gmail.com', :to => 'ini.ebone@gmail.com', :html_body => "<h1>Contato do Site</h1><p>#{mensagem}</p><br>Enviado por <strong>#{nome}</strong><br><strong>E-mail: </strong>#{email}<br><strong>Website:</strong> #{website}.", :body => "<h1>Contato do Site</h1><p>#{mensagem}</p><br>Enviado por <strong>#{nome}</strong><br><strong>E-mail: </strong>#{email}<br><strong>Website:</strong> #{website}.") 
   end
 end
