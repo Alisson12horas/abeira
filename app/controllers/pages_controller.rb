@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def admin
   end
 
+  def equipe
+  end
+
   def fotos
   end
 
