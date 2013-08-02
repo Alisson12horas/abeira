@@ -1,15 +1,10 @@
 class AgendasController < ApplicationController
-  # GET /agendas
-  # GET /agendas.json
+  respond_to :html
+
   def index
     @agendas = Agenda.all
     @agendas_by_date = @agendas.group_by(&:data)
-    @date = Date.today
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @agendas }
-    end
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
   end
 
   # GET /agendas/1

@@ -25,7 +25,7 @@
         <%= @date.strftime("%m / %Y") %>
         <%= link_to ">", date: @date.next_month %>
       </h1>
-      <%= calendar @date do |date| %>
+      <%= calendar do |date| %>
       <%= date.day %>
       <% if @agendas_by_date[date] %>
       <ul>
