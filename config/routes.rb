@@ -1,10 +1,13 @@
 Abeira::Application.routes.draw do
 
+  resources :users
+  resources :sessions
   resources :agendas
   resources :podcasts
 
   root :to => 'home#index'
 
+  match '/signout', to: 'sessions#destroy', via: :delete
   match '/admin',   to: 'pages#admin'
   match '/fotos',   to: 'pages#fotos'
   match '/contato',   to: 'pages#contato'

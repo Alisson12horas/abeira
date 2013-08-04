@@ -1,0 +1,20 @@
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Usuários</h2>
+  </div>
+</div>
+
+<div class="content_wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+
+<% @users.each do |user| %>
+
+<h3><%= user.name %> | <%= link_to 'Editar', edit_user_path(user) %></h3>
+<% end %>
+<br>
+<br>
+</div>
+</div>
+</div>

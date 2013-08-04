@@ -104,7 +104,7 @@
   <div class="top-header">
     <div class="main-wrapper">
       <div class="row">
-        <div class="large-9 columns">
+        <div class="large-7 columns">
           <ul class="inline-list">
             <li><a href="/">Home</a></li>
             <li><a href="/podcasts">Podcast</a></li>
@@ -115,8 +115,14 @@
             <li><a href="/contato">Contato</a></li>           
           </ul>
         </div>
-        <div class="small-3 columns  text-right">
-          <span>contato@abeira.com</span><a href="/admin" class="button login"><i class="icon-lock"></i>Login</a>
+        <div class="small-5 columns  text-right">
+          <span>contato@abeira.com</span>
+          <% if signed_in? %>
+            <a href="/admin" class="button login"><i class="icon-lock"></i>Admin</a>
+            <%= link_to "Sign out", signout_path, method: "delete", :class => "button login" %>
+          <% else %>
+            <a href="/sessions/new" class="button login"><i class="icon-lock"></i>Login</a>
+          <% end %>
         </div> 
       </div>
     </div>

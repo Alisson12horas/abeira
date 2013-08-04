@@ -24,3 +24,4 @@ gem 'will_paginate'
 gem 'ckeditor_rails'
 gem "html_truncator"
 gem 'pony'
+gem 'bcrypt-ruby', '3.0.1'

@@ -1,0 +1,17 @@
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Usuário</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+<br>
+<div class="row">
+  <div class="large-12 columns">
+    <p id="notice"><%= notice %></p>
+    <h1><%= @user.name %></h1>
+    <h3><%= @user.email %></h3>
+    <br><br>
+    <%= link_to 'Voltar', users_path %><br><br>
+  </div>
+</div>
