@@ -13,12 +13,15 @@
     <h3><%= @agenda.data.strftime("%d/%m/%Y") %></h3>
     <p><%= raw(@agenda.texto) %><br></p>
 
+    
+    <%= link_to 'Voltar', agendas_path %> 
     <!-- admin only -->
-    <%= link_to 'Voltar', agendas_path %> |
+    <% if signed_in? %>
+    |
     <%= link_to 'Editar', edit_agenda_path(@agenda) %> |
     <%= link_to 'Deletar', @agenda, method: :delete, data: { confirm: 'Tem certeza?' } %>
     <!-- admin only -->
-
+    <% end %>
     <br><br><br>
   </div>
 </div>

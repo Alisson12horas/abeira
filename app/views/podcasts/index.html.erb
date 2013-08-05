@@ -6,7 +6,10 @@
 </div>
 <!-- FIM TÍTULO -->
 <br>
+
+
 <!-- admin only -->
+<% if signed_in? %>
 <div class="content_wrapper">
   <div class="row">
     <div class="large-12 columns">
@@ -14,6 +17,7 @@
     </div>     
   </div>
 </div> 
+<% end %>
 <!-- admin only -->
 
 <% @podcasts.each do |podcast| %>
@@ -29,7 +33,9 @@
         <%= link_to 'Leia mais', podcast, :class => "button" %>
 
         <!-- admin only -->
+        <% if signed_in? %>
         &nbsp <%= link_to 'Editar', edit_podcast_path(podcast) %> | <%= link_to 'Deletar', podcast, method: :delete, data: { confirm: 'Tem certeza?' } %>
+        <% end %>
         <!-- admin only -->
 
       </article>

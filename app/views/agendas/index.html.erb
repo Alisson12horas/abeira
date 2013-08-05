@@ -6,7 +6,9 @@
 </div>
 <!-- FIM TÍTULO -->
 
+
 <!-- admin only -->
+<% if signed_in? %>
 <div class="content_wrapper">
   <div class="row">
     <div class="large-12 columns">
@@ -14,6 +16,7 @@
     </div>     
   </div>
 </div> 
+<% end %>
 <!-- admin only -->
 
 <br>

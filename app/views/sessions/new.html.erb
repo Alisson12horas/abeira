@@ -1,7 +1,21 @@
-<%= form_for(:session, url: sessions_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Sign in" %>
-<% end %>
+<!-- TÍTULO -->
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <h2>Login</h2>
+  </div>
+</div>
+<!-- FIM TÍTULO -->
+
+<div class="content_wrapper">
+  <div class="row">
+    <div class="large-12 columns">
+      <%= form_for(:session, url: sessions_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <%= f.label :senha %>
+      <%= f.password_field :password %>
+      <%= f.submit "Login", :class => 'button large' %>
+      <% end %>
+    </div>
+  </div>
+</div>
