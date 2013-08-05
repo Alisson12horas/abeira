@@ -4,43 +4,45 @@
     <h2>Editar Usuário</h2>
   </div>
 </div>
+<% if signed_in? %>
+
 <!-- FIM TÍTULO -->
 
 <div class="row">
   <div class="large-12 columns">
-    <%= render 'form' %>
-  </div>
-</div>
+    <%= form_for(@user) do |f| %>
 
-<%= form_for(@user) do |f| %>
-
-<!-- error form messages -->
-<% if @user.errors.any? %>
-<div id="error explanation">
-  <div class="alert alert-error">
-    O formulario contem <%= pluralize(@user.errors.count, "erro") %>.
-  </div>
-  <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-    <li>* <%= msg %></li>
+    <!-- error form messages -->
+    <% if @user.errors.any? %>
+    <div id="error explanation">
+      <div class="alert alert-error">
+        O formulario contem <%= pluralize(@user.errors.count, "erro") %>.
+      </div>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
     <% end %>
-  </ul>
+
+    <br><br>
+    <%= f.label :nome %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :senha %>
+    <%= f.password_field :password %>
+
+    <%= f.label :confirme_a_senha, "Confirme a senha" %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit"Salvar", :class => 'button large' %>
+
+    <% end %>
+  </div>
 </div>
-<% end %>
-
-<br><br>
-<%= f.label :nome %>
-<%= f.text_field :name %>
-
-<%= f.label :email %>
-<%= f.text_field :email %>
-
-<%= f.label :senha %>
-<%= f.password_field :password %>
-
-<%= f.label :confirme_a_senha, "Confirme a senha" %>
-<%= f.password_field :password_confirmation %>
-
-<%= f.submit"Salvar", :class => 'button large' %>
 
 <% end %>
