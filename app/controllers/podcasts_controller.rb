@@ -1,35 +1,16 @@
 class PodcastsController < ApplicationController
-  # GET /podcasts
-  # GET /podcasts.json
+  :respond_to :html
+
   def index
     @podcasts = Podcast.order("id DESC").paginate(:page => params[:page], :per_page => 5)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @podcasts }
-    end
   end
 
-  # GET /podcasts/1
-  # GET /podcasts/1.json
   def show
     @podcast = Podcast.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @podcast }
-    end
   end
 
-  # GET /podcasts/new
-  # GET /podcasts/new.json
   def new
     @podcast = Podcast.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @podcast }
-    end
   end
 
   # GET /podcasts/1/edit
