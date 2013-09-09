@@ -146,14 +146,14 @@
           <section class="top-bar-section">
             <!-- Left Nav Section -->
             <ul class="right">
-              <li><%= link_to "Home", "/", :class => is_active?("index") %></li>
-              <li><%= link_to "Podcast", "/podcasts", :class => is_active?("podcast") %></li>
-              <li><a href="/agenda">Agenda</a></li>
-              <li><%= link_to "Fotos", "/fotos", :class => is_active?("fotos") %></li>
+              <li><a class="<%= current_page('home','index') %>" href="/">Home</a></li>
+              <li><a class="<%= current_page('podcasts','index') %>" href="/podcasts">Podcast</a></li>
+              <li><a class="<%= current_page('agendas','index') %>" href="/agenda">Agenda</a></li>
+              <li><a class="<%= current_page('pages','fotos') %>" href="/fotos">Fotos</a></li>
               <!-- <li><a href="#">Vídeos</a></li> -->
               <li><a href="">Colunas</a></li>
-              <li><%= link_to "Equipe", "/equipe", :class => is_active?("equipe") %></li>
-              <li><%= link_to "Contato", "/contato", :class => is_active?("contato") %></li>
+              <li><a class="<%= current_page('pages','equipe') %>" href="/equipe">Equipe</a></li>
+              <li><a class="<%= current_page('pages','contato') %>" href="/contato">Contato</a></li>
             </ul>
             <!-- End Left Nav Section -->          
           </section>

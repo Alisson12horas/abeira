@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-  :respond_to :html
+  respond_to :html
 
   def index
     @podcasts = Podcast.order("id DESC").paginate(:page => params[:page], :per_page => 5)
